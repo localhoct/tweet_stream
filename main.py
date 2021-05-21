@@ -16,7 +16,7 @@ try:
 except:
     print("Error during authentication")
 
-
+track_for = input("Please Eenter the hashtag to stream (ex: #python): ")
 tweets_listener = MyStreamListener(APITW)
 stream = tweepy.Stream(APITW.auth, tweets_listener)
-stream.filter(track=["#بیداری"], is_async=True)
+stream.filter(track=[track_for], is_async=True)
