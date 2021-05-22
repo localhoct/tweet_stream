@@ -6,10 +6,9 @@ this bot can stream the hashtag in twitter
  ```pip install tweepy```
 ### get developer account from twiiter if you don't have
 [click here](https://developer.twitter.com/) for apply developer account
-### edit **auth.py**
+### create **keys.py**
 ```python
-auth = tweepy.OAuthHandler("CONSUMER_KEY", "CONSUMER_SECRET")
-auth.set_access_token("ACCESS_TOKEN", "ACCESS_TOKEN_SECRET")
+or edit filename and key.sample.py to keys.py with your keys
 ```
 ###### after you get the developer account  create app and get this key and secrets
 

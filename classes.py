@@ -7,8 +7,8 @@ class MyStreamListener(tweepy.StreamListener):
 
     def on_status(self, tweet):
         print(f"\nUser: {tweet.user.name} (@{tweet.user.screen_name})\nTweet: {tweet.text}\n\n-------")
-        with open('extarcted.cvs','a') as f:
-            f.write(f"{tweet.user.screen_name}, {tweet.text}\n")
-
+        if "RT @" in tweet.text:
+            print('retweeted')
+        
     def on_error(self, status):
         print("Error detected")
